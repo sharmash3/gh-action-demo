@@ -22,7 +22,7 @@ jobs:
         distribution: 'adoptopenjdk'
 
     - name: Cache Maven dependencies (optional)
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.m2/repository
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
@@ -39,7 +39,7 @@ jobs:
       run: mvn package -DskipTests=true
 
     - name: Upload Artifact (Optional)
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
-        name: spring-boot-application
+        name: gh-action-demo
         path: target/*.jar
