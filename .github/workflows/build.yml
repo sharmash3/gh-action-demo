@@ -41,8 +41,8 @@ jobs:
 
     - name: Build Docker Image
       run: |
-        docker build -t spring-boot-app:${{ github.sha }} .
-        docker tag spring-boot-app:${{ github.sha }} spring-boot-app:latest
+        docker build -t surajsh3/spring-boot-app:${{ github.sha }} .
+        docker tag surajsh3/spring-boot-app:${{ github.sha }} spring-boot-app:latest
 
     - name: Push Docker Image to Docker Hub (Optional)
       uses: docker/login-action@v2
