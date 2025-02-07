@@ -52,8 +52,8 @@ jobs:
 
     - name: Push Docker Image to Docker Hub
       run: |
-        docker push spring-boot-app:${{ github.sha }}
-        docker push spring-boot-app:latest
+        docker push surajsh3/spring-boot-app:${{ github.sha }}
+        docker push surajsh3/spring-boot-app:latest
 
     - name: Upload Artifact (Optional)
       uses: actions/upload-artifact@v4
